@@ -1,7 +1,7 @@
 import { NotFoundComponent } from './not-found/not-found.component';
 import { NgModule } from '@angular/core';
-import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { ModuleLoadingStrategyService } from './config/module.loading.stategy';
+import {RouterModule, Routes} from '@angular/router';
+import {ModuleLoadingStrategyService} from "./config/module.loading.stategy";
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
@@ -34,8 +34,8 @@ const routes: Routes = [
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, {
-      preloadingStrategy: ModuleLoadingStrategyService,
-    }),
+        preloadingStrategy: ModuleLoadingStrategyService,
+    })
   ],
   exports: [RouterModule],
 })

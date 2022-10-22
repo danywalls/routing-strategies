@@ -1,16 +1,15 @@
-import { WalletComponent } from './wallet/wallet.component';
-import { MoneyTransferModule } from './moneytransfer/moneytransfer.module';
-import { ActivityModule } from './activity/activity.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import {AppRoutingModule} from "./app-routing.module";
 
 @NgModule({
   declarations: [AppComponent, NotFoundComponent],
-  imports: [BrowserModule, AppRoutingModule],
-  providers: [],
+  imports: [
+    AppRoutingModule,
+      BrowserModule
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
